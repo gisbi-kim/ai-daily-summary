@@ -69,10 +69,13 @@
     }
     .dek {
       margin: 16px 0 0;
-      max-width: 800px;
+      max-width: 980px;
       color: var(--muted);
       font-size: 15px;
     }
+    .dek p { margin: 0; }
+    .dek p + p { margin-top: 9px; }
+    .dek strong { color: var(--ink); }
     .header-actions {
       display: flex;
       flex-wrap: wrap;
@@ -480,7 +483,10 @@
       <div>
         <p class="eyebrow">APRL / Continuous Intelligence Log</p>
         <h1>AI Signal<br>Archive</h1>
-        <p class="dek">Slack의 AI News Brief를 원문 그대로 축적하고, 논문·모델·시스템·로보틱스 신호를 한 화면에서 검색하는 공개 아카이브.</p>
+        <div class="dek">
+          <p><strong>매일 아침·점심·저녁 세 차례, 12개 소스를 훑습니다.</strong> AI News by Smol AI, The Batch, Hugging Face Papers, alphaXiv, arXiv cs.AI, LM Arena, Artificial Analysis, OpenRouter Rankings, Simon Willison, Latent Space, Interconnects, SemiAnalysis의 최신 항목을 확인합니다.</p>
+          <p>중복·홍보성 이슈를 걷어내고 APRL의 관심사인 로보틱스·VLA·agent·모델·시스템 관점에서 핵심 신호 10개를 선별합니다. 각 항목에 원문 링크, 핵심 요약, ‘왜 중요한가’를 붙이고 전체 흐름을 한 줄로 정리해 Slack AI News Brief로 발행하며, 이 사이트에는 발행본을 원문 그대로 축적합니다.</p>
+        </div>
         <div class="header-actions">
           <a class="reference-jump" href="#referenceSources" aria-label="참고 중인 사이트 12개 영역으로 이동">참고 사이트 12개 ↓</a>
         </div>
