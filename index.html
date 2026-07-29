@@ -455,12 +455,12 @@
   const renderInline = (value) => {
     const links = [];
     let text = String(value ?? "").replace(/<([^>|]+)\|([^>]+)>/g, (_, url, label) => {
-      const key = `@@LINK_${links.length}@@`;
+      const key = `@@LINK${links.length}@@`;
       links.push({ key, url, label });
       return key;
     });
     text = text.replace(/<((?:https?:\/\/)[^>]+)>/g, (_, url) => {
-      const key = `@@LINK_${links.length}@@`;
+      const key = `@@LINK${links.length}@@`;
       links.push({ key, url, label: url });
       return key;
     });
