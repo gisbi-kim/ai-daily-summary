@@ -1,4 +1,4 @@
-name: Bootstrap and deploy archive
+name: Deploy AI Daily Summary
 
 on:
   push:
@@ -6,63 +6,28 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+  deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Migrate the existing archive once
-        shell: bash
-        run: |
-          set -euo pipefail
-          if [[ ! -f index.html || ! -f data/digests.json ]]; then
-            mkdir -p data
-            curl --fail --silent --show-error --location \
-              https://raw.githubusercontent.com/gisbi-kim/gisbi-kim.github.io/master/ai-daily-summary/index.html \
-              --output index.html
-            curl --fail --silent --show-error --location \
-              https://raw.githubusercontent.com/gisbi-kim/gisbi-kim.github.io/master/ai-daily-summary/data/digests.json \
-              --output data/digests.json
-            touch .nojekyll
-            cat > README.md <<'EOF'
-          # AI Daily Summary
-
-          Searchable public archive of APRL AI News Briefs delivered to Slack.
-
-          - Website: https://gisbi-kim.github.io/ai-daily-summary/
-          - Database: `data/digests.json`
-          - Source channel: `#aprl-chat-ai-tips`
-
-          The briefing automation appends the exact Slack message text to the JSON database after each delivery.
-          EOF
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add index.html data/digests.json .nojekyll README.md
-            if ! git diff --cached --quiet; then
-              git commit -m "Migrate AI news archive to dedicated repository"
-              git push
-            fi
-          fi
-
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
-      - name: Upload Pages artifact
+      - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
