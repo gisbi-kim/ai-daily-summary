@@ -327,6 +327,80 @@
       color: var(--muted);
     }
     .error { color: #ff9d9d; }
+    .reference-sources {
+      margin-top: 42px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, rgba(120,169,255,.07), transparent 42%),
+        rgba(16,21,29,.72);
+    }
+    .reference-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 560px);
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 20px;
+    }
+    .reference-heading h2 {
+      margin: 4px 0 0;
+      font-size: clamp(25px, 4vw, 38px);
+      line-height: 1.08;
+      letter-spacing: -.04em;
+    }
+    .reference-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .source-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .source-grid a {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 11px;
+      align-items: center;
+      min-height: 66px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(11,14,19,.58);
+      text-decoration: none;
+      transition: border-color .16s ease, background .16s ease, transform .16s ease;
+    }
+    .source-grid a:hover,
+    .source-grid a:focus-visible {
+      border-color: var(--accent-2);
+      background: rgba(120,169,255,.08);
+      transform: translateY(-1px);
+      outline: none;
+    }
+    .source-index {
+      color: var(--accent);
+      font: 750 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .source-name {
+      display: block;
+      font-size: 14px;
+      font-weight: 750;
+      line-height: 1.25;
+    }
+    .source-domain {
+      display: block;
+      margin-top: 3px;
+      overflow: hidden;
+      color: var(--muted);
+      font: 600 10px/1.25 ui-monospace, SFMono-Regular, Menlo, monospace;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
     footer {
       margin-top: 36px;
       padding-top: 18px;
@@ -352,6 +426,8 @@
       .summary-strip { grid-template-columns: 1fr 1fr; }
       .archive { grid-template-columns: 1fr; }
       .rail { display: none; }
+      .reference-heading { grid-template-columns: 1fr; gap: 10px; }
+      .source-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 680px) {
       .shell { width: min(100% - 18px, var(--max)); padding-top: 9px; }
@@ -364,6 +440,8 @@
       .items { grid-template-columns: 1fr; }
       .item:nth-child(odd) { border-right: 0; }
       .item:nth-last-child(2):nth-child(odd) { border-bottom: 1px solid var(--line); }
+      .reference-sources { margin-top: 28px; padding: 20px 14px; }
+      .source-grid { grid-template-columns: 1fr; }
       footer { flex-direction: column; }
     }
   </style>
@@ -405,9 +483,33 @@
       <div id="digestList" class="digests"><div class="empty">데이터베이스를 불러오는 중이야.</div></div>
     </section>
 
+    <section class="reference-sources" aria-labelledby="referenceSourcesTitle">
+      <div class="reference-heading">
+        <div>
+          <p class="eyebrow">Editorial reference map</p>
+          <h2 id="referenceSourcesTitle">참고 중인 사이트 12개</h2>
+        </div>
+        <p>뉴스 브리프를 구성할 때 정기적으로 확인하는 뉴스레터, 논문 허브, 모델 벤치마크와 분석 매체입니다. 개별 브리프의 직접 출처는 각 뉴스 항목에 별도로 표시합니다.</p>
+      </div>
+      <ol class="source-grid">
+        <li><a href="https://news.smol.ai/" target="_blank" rel="noopener noreferrer"><span class="source-index">01</span><span><span class="source-name">AI News by Smol AI</span><span class="source-domain">news.smol.ai</span></span></a></li>
+        <li><a href="https://www.deeplearning.ai/the-batch/" target="_blank" rel="noopener noreferrer"><span class="source-index">02</span><span><span class="source-name">The Batch</span><span class="source-domain">deeplearning.ai/the-batch</span></span></a></li>
+        <li><a href="https://huggingface.co/papers" target="_blank" rel="noopener noreferrer"><span class="source-index">03</span><span><span class="source-name">Hugging Face Papers</span><span class="source-domain">huggingface.co/papers</span></span></a></li>
+        <li><a href="https://alphaxiv.org/" target="_blank" rel="noopener noreferrer"><span class="source-index">04</span><span><span class="source-name">alphaXiv</span><span class="source-domain">alphaxiv.org</span></span></a></li>
+        <li><a href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener noreferrer"><span class="source-index">05</span><span><span class="source-name">arXiv cs.AI Recent</span><span class="source-domain">arxiv.org/list/cs.AI/recent</span></span></a></li>
+        <li><a href="https://lmarena.ai/" target="_blank" rel="noopener noreferrer"><span class="source-index">06</span><span><span class="source-name">LM Arena</span><span class="source-domain">lmarena.ai</span></span></a></li>
+        <li><a href="https://artificialanalysis.ai/" target="_blank" rel="noopener noreferrer"><span class="source-index">07</span><span><span class="source-name">Artificial Analysis</span><span class="source-domain">artificialanalysis.ai</span></span></a></li>
+        <li><a href="https://openrouter.ai/rankings" target="_blank" rel="noopener noreferrer"><span class="source-index">08</span><span><span class="source-name">OpenRouter Rankings</span><span class="source-domain">openrouter.ai/rankings</span></span></a></li>
+        <li><a href="https://simonwillison.net/" target="_blank" rel="noopener noreferrer"><span class="source-index">09</span><span><span class="source-name">Simon Willison’s Blog</span><span class="source-domain">simonwillison.net</span></span></a></li>
+        <li><a href="https://www.latent.space/" target="_blank" rel="noopener noreferrer"><span class="source-index">10</span><span><span class="source-name">Latent Space</span><span class="source-domain">latent.space</span></span></a></li>
+        <li><a href="https://www.interconnects.ai/" target="_blank" rel="noopener noreferrer"><span class="source-index">11</span><span><span class="source-name">Interconnects</span><span class="source-domain">interconnects.ai</span></span></a></li>
+        <li><a href="https://semianalysis.com/" target="_blank" rel="noopener noreferrer"><span class="source-index">12</span><span><span class="source-name">SemiAnalysis</span><span class="source-domain">semianalysis.com</span></span></a></li>
+      </ol>
+    </section>
+
     <footer>
       <span>Static JSON archive · public GitHub Pages</span>
-      <span><a href="data/digests.json">Raw database</a> · <a href="https://github.com/gisbi-kim/gisbi-kim.github.io/tree/master/ai-daily-summary">Source</a></span>
+      <span><a href="data/digests.json">Raw database</a> · <a href="https://github.com/gisbi-kim/ai-daily-summary">Source</a></span>
     </footer>
   </main>
 
