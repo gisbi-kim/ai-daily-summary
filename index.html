@@ -73,6 +73,33 @@
       color: var(--muted);
       font-size: 15px;
     }
+    .header-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
+    }
+    .reference-jump {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border: 1px solid rgba(129,247,197,.42);
+      border-radius: 11px;
+      color: var(--accent);
+      background: rgba(129,247,197,.07);
+      font: 750 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .02em;
+      text-decoration: none;
+      transition: border-color .16s ease, background .16s ease, transform .16s ease;
+    }
+    .reference-jump:hover,
+    .reference-jump:focus-visible {
+      border-color: var(--accent);
+      background: rgba(129,247,197,.13);
+      transform: translateY(-1px);
+      outline: none;
+    }
     .status {
       min-width: 210px;
       padding: 15px 17px;
@@ -328,6 +355,7 @@
     }
     .error { color: #ff9d9d; }
     .reference-sources {
+      scroll-margin-top: 88px;
       margin-top: 42px;
       padding: 26px;
       border: 1px solid var(--line);
@@ -453,6 +481,9 @@
         <p class="eyebrow">APRL / Continuous Intelligence Log</p>
         <h1>AI Signal<br>Archive</h1>
         <p class="dek">Slack의 AI News Brief를 원문 그대로 축적하고, 논문·모델·시스템·로보틱스 신호를 한 화면에서 검색하는 공개 아카이브.</p>
+        <div class="header-actions">
+          <a class="reference-jump" href="#referenceSources" aria-label="참고 중인 사이트 12개 영역으로 이동">참고 사이트 12개 ↓</a>
+        </div>
       </div>
       <aside class="status" aria-live="polite">
         <span>Archive status</span>
@@ -483,7 +514,7 @@
       <div id="digestList" class="digests"><div class="empty">데이터베이스를 불러오는 중이야.</div></div>
     </section>
 
-    <section class="reference-sources" aria-labelledby="referenceSourcesTitle">
+    <section id="referenceSources" class="reference-sources" aria-labelledby="referenceSourcesTitle">
       <div class="reference-heading">
         <div>
           <p class="eyebrow">Editorial reference map</p>
