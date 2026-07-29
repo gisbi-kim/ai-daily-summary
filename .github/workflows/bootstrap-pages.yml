@@ -6,16 +6,16 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  archive-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -23,6 +23,56 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
+      - name: Merge pending digest records
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          db_path = Path("data/digests.json")
+          pending_dir = Path("data/pending")
+          pending = sorted(pending_dir.glob("*.json")) if pending_dir.exists() else []
+          if not pending:
+              raise SystemExit(0)
+
+          database = json.loads(db_path.read_text(encoding="utf-8"))
+          records = database.setdefault("digests", [])
+          known_ids = {record.get("id") for record in records}
+          known_ts = {record.get("slack_ts") for record in records}
+          changed = False
+
+          for request_path in pending:
+              request = json.loads(request_path.read_text(encoding="utf-8"))
+              record = request["record"]
+              required = {"id", "published_at", "slack_ts", "channel_id", "raw_text"}
+              missing = required.difference(record)
+              if missing:
+                  raise ValueError(f"{request_path}: missing fields {sorted(missing)}")
+              if record["id"] not in known_ids and record["slack_ts"] not in known_ts:
+                  records.append(record)
+                  known_ids.add(record["id"])
+                  known_ts.add(record["slack_ts"])
+                  database["updated_at"] = request.get("updated_at", record["published_at"])
+                  changed = True
+              request_path.unlink()
+
+          if changed:
+              db_path.write_text(
+                  json.dumps(database, ensure_ascii=False, separators=(",", ":")),
+                  encoding="utf-8",
+              )
+          PY
+
+          if ! git diff --quiet -- data/digests.json data/pending; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/digests.json data/pending
+            git commit -m "Archive pending AI news brief"
+            git push
+          fi
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
