@@ -748,6 +748,13 @@
       "published_at": "2026-09-06T19:06:33.676+09:00",
       "raw_text": "**AI News Brief — 2026-09-06 19:06 KST**\n\n1. **XR-2: 1,500시간 양팔 가사 조작 데이터와 온폴리시 교정 스케일링** — arXiv cs.RO\n일상 가사 작업의 양팔 시연 1,500시간을 공개하고 VLA 모델 XR-2를 학습했어. 전문가 시연량과 실시간 인간 개입으로 얻은 DAgger 교정 데이터를 늘릴수록 조사 범위에서 성공률이 꾸준히 상승했다고 보고했어.\n왜 중요: 대규모 원격조작 데이터에 실패 시점의 온폴리시 교정을 결합하는 방식이 범용 양팔 정책의 실용적 스케일링 축으로 확인됐어.\nhttps://arxiv.org/abs/2609.03591\n\n2. **FWBC-VLA: 힘 센서 없이 접촉을 읽는 전신 loco-manipulation** — arXiv cs.RO\n잔여 토크로 접촉 강도와 변화를 추정해 토큰으로 VLA action expert에 넣고, 추정 힘·고유감각·접촉 상태로 WBC 보정 동작을 생성해. 5,000여 에피소드로 학습해 실제 바퀴-다리 로봇의 화이트보드 닦기와 도어클로저 문 열기에서 검증했어.\n왜 중요: 고수준 VLA와 저수준 전신 안정화를 접촉 상태로 연결해, 별도 F/T 센서 없이도 실제 힘 상호작용을 다루는 구체적 구조야.\nhttps://arxiv.org/abs/2609.03889\n\n3. **MINERVA: LIBERO 95.1%에 필요한 조작 정책은 54만 파라미터** — arXiv cs.RO\n0.54M 정책이 LIBERO 네 스위트 2,000회 rollout에서 평균 95.1%를 기록해 π₀.₅보다 7,700배 작으면서 2.4%p 낮았어. 다만 LIBERO-Plus에서는 46~56%로 떨어지고 광도 변화에는 거의 견디지 못해, 표준 벤치의 낮은 용량 바닥도 함께 드러냈어.\n왜 중요: 거대 VLA 성능을 곧 일반화로 해석하기 어렵고, 소형 기준선·분포변화·CPU 지연을 함께 보고해야 한다는 강한 경고야.\nhttps://arxiv.org/abs/2609.03715\n\n4. **토폴로지 매크로 액션으로 VLN-CE 폐루프 RL을 짧게** — arXiv cs.RO\n연속 환경을 frontier-node 토폴로지 그래프로 추상화해 고수준 PPO는 매크로 액션만 고르고, 학습 없는 저수준 제어기가 이동을 수행해. 저자들은 R2R-CE와 RxR-CE에서 최고 성능을 보고했어.\n왜 중요: 긴 미세 제어 horizon과 sparse reward를 분리하는 구조는 언어 경로계획과 실제 제어를 연결하는 VLN 시스템 설계에 직접 참고가 돼.\nhttps://arxiv.org/abs/2609.03906\n\n5. **물리 상태로 정렬한 JEPA 월드모델** — arXiv cs.RO\n행동 조건 latent prediction에 inverse dynamics와 연속 상태 정렬을 더해 표현을 실제 구성·운동에 묶었어. TwoRoom 100%, PushT 98%, OGBench-Cube 87% 성공률을 보고했고, 상태 정렬은 네 작업 모두에서 IDM 단독보다 계획 성공을 높였어.\n왜 중요: 픽셀 생성 없이 계획하는 latent 월드모델에서도 행동과 물리 상태를 명시적으로 보존해야 제어 가능한 표현이 된다는 증거야.\nhttps://arxiv.org/abs/2609.03565\n\n6. **ARTiS: 공구 사용용 7-DoF 적응 그리퍼** — arXiv cs.RO / TASE\n능동 jamming 소프트 팜, fin-ray 손끝, 강체 메커니즘을 결합해 다양한 공구 표면에 맞추면서 단단히 고정해. 분해용 일반 공구들로 순응성·내구성·기능 다양성을 평가했고 하드웨어 지침과 영상도 공개했어.\n왜 중요: 공구 조작은 정책뿐 아니라 접촉 형상을 흡수하는 end-effector 설계가 성능과 데이터 요구량을 좌우한다는 실물 사례야.\nhttps://arxiv.org/abs/2609.03362\n\n7. **RIWM: ‘그럴듯한 미래’보다 ‘중요한 결과’를 예측하는 월드모델** — arXiv cs.AI\n이 관점 논문은 likelihood와 risk, prediction과 intervention, 단기 예측과 누적 결과 사이의 불일치를 지적해. 결과 중심 표현·반사실 추론·안전 episodic memory·런타임 보증을 묶은 Risk-Informed World Model 방향을 제안했어.\n왜 중요: 안전 임계 로봇에서는 영상 품질보다 불확실성·회복 가능성·행동 보류 기준을 평가 항목으로 올려야 한다는 연구 의제를 명확히 해.\nhttps://arxiv.org/abs/2609.03774\n\n8. **EditVid: 학습 없이 한 모델로 지시·참조 기반 비디오 편집 통합** — arXiv cs.CV\n희소 causal memory, 대응 기반 post-attention 토큰 주입, soft latent blending으로 지역 일관성·장기 identity·편집 범위를 함께 제어해. FiVE에서 78.16으로 비교한 최강 training-free 기준 58.95를 앞섰다고 보고했어.\n왜 중요: 시간적으로 긴 시각 생성에서 메모리·대응·지역성 제약을 분리해 결합하는 방식은 비디오 월드모델의 일관성 제어에도 참고가 돼.\nhttps://arxiv.org/abs/2609.04190\n\n9. **SIGNBALANCE: GRPO가 ‘우연한 정답’을 과대보상하는 문제** — arXiv cs.AI\n작은 답 후보군이나 검색 경로가 많은 문제에서 추측으로 맞힌 rollout도 큰 advantage를 받는 현상을 분석했어. verifier 부호는 유지하되 전역 scale과 class별 stop-gradient 재조정을 쓰는 SIGNBALANCE가 bounded-answer 수학과 검색 에이전트에서 GRPO를 개선했다고 해.\n왜 중요: 검증 가능한 보상만으로도 정책이 진짜 추론 대신 우연한 성공을 학습할 수 있어, 로봇·에이전트 RL의 credit assignment 검증이 필수야.\nhttps://arxiv.org/abs/2609.04063\n\n**한 줄 결론:** 이번 회차는 로봇 학습이 대규모 양팔 데이터와 온폴리시 교정으로 확장되는 동시에, 접촉·물리 상태·토폴로지·안전 제약을 정책 내부에 명시적으로 넣는 방향으로 수렴한다는 신호가 강해.",
       "slack_ts": "1788689193.676489"
+    },
+    {
+      "id": "2026-09-07-0806",
+      "published_at": "2026-09-07T08:06:53.566+09:00",
+      "slack_ts": "1788736013.566039",
+      "channel_id": "C0B07C6NQHL",
+      "raw_text": "**AI News Brief — 2026-09-07 08:06 KST**\n\n이번 회차 주요 신규 업데이트 없음"
     }
   ],
   "schema_version": 1,
@@ -755,5 +762,5 @@
     "channel_id": "C0B07C6NQHL",
     "slack_channel": "#aprl-chat-ai-tips"
   },
-  "updated_at": "2026-09-06T19:06:33.676+09:00"
+  "updated_at": "2026-09-07T08:06:53.566+09:00"
 }
