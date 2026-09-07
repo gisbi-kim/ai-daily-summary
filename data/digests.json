@@ -755,6 +755,13 @@
       "slack_ts": "1788736013.566039",
       "channel_id": "C0B07C6NQHL",
       "raw_text": "**AI News Brief — 2026-09-07 08:06 KST**\n\n이번 회차 주요 신규 업데이트 없음"
+    },
+    {
+      "id": "2026-09-07-1201",
+      "published_at": "2026-09-07T12:01:42.582+09:00",
+      "slack_ts": "1788750102.582289",
+      "channel_id": "C0B07C6NQHL",
+      "raw_text": "**AI News Brief — 2026-09-07 12:01 KST**\n\n1. **TacPAC: 촉각 예측을 실행 중 행동 보정으로 연결** — arXiv\n비전 중심 world-action model이 놓치는 접촉 신호를, 계획 당시 예측한 촉각과 실제 촉각을 대조해 남은 action chunk에 반영해. 5개 실로봇 과제에서 평균 성공률을 22%에서 64%로 높였고, 보정 비용은 chunk 재생성보다 20.7배 낮다고 보고했어.\n**왜 중요:** 접촉이 핵심인 삽입·취약물체·재파지에서 tactile을 관측 보조가 아니라 폐루프 정책 보정 신호로 쓰는 실용적 설계야.\n<https://arxiv.org/abs/2609.05266|논문>\n\n2. **RoboSPA: 공간·절차 복잡도를 단계적으로 올리는 VLA 진단 벤치마크** — arXiv / EMNLP 2026\n10개 범주·56개 기본 과제를 5단계 난이도로 확장한 280개 변형과, 여러 embodiment·장면에서 수집한 52.7만 trajectory를 공개했어. 대표 VLA들은 복잡한 공간관계, 정밀 저수준 실행, 장기 기억 기반 계획에서 계속 약점을 보였어.\n**왜 중요:** 단순 성공률을 넘어 VLA가 공간 추론과 long-horizon 절차 중 어디서 무너지는지 분해해 비교할 수 있어.\n<https://arxiv.org/abs/2609.05324|논문>\n\n3. **ROBORMBENCH: 같은 행동도 지시문 바꾸면 보상이 뒤집힌다** — arXiv\n2,390개 실로봇 trajectory와 21,673개 검증된 paraphrase로 VLM reward model의 표현 민감도를 측정했어. 의미가 같은 지시를 바꾸는 것만으로 동일 행동의 진행도와 성공·실패 판정이 흔들렸고, 모델 규모나 명시적 reasoning도 이를 안정적으로 해결하지 못했어.\n**왜 중요:** 언어 기반 reward를 정책학습에 쓰려면 정확도뿐 아니라 paraphrase 불변성을 별도 안전 조건으로 검증해야 해.\n<https://arxiv.org/abs/2609.05401|논문>\n\n4. **LIBERO-RECOVER: 조작 정책을 ‘성공’이 아니라 ‘실패 후 회복’으로 평가** — arXiv\nSOTA embodied model의 실제 실행 실패를 모아 재시도, 행동 적응, 물체 상태 복구, 환경 복구의 4단계로 구성한 1,000개 이상 시나리오를 제안했어. failed grasp·충돌·의도치 않은 물체 이동 뒤에도 과제를 이어갈 수 있는지를 측정해.\n**왜 중요:** 포화된 LIBERO 성공률과 현장 신뢰성 사이의 간극을 recovery 능력이라는 직접적인 지표로 드러내.\n<https://arxiv.org/abs/2609.05178|논문>\n\n5. **LSS: 추론 비용 없이 VLA에 물리적 reasoning을 이식** — arXiv\n학습 중 각 action token을 해당 조작 단계의 물리적 rationale 임베딩과 맞추는 보조 loss를 쓰고, 배포 때 projection head를 제거해 기본 정책의 추론 비용을 그대로 유지해. 단계별 Dense LSS가 episode 전체를 한 번에 맞추는 방식보다 미지 과제 전이가 좋고, phase 구분 가능성도 약 2배 높았어.\n**왜 중요:** 긴 조작에서 reasoning token이나 미래 rollout의 누적 지연 없이 의미적 구조를 정책 표현에 넣는 경로를 보여줘.\n<https://arxiv.org/abs/2609.04893|논문>\n\n6. **FIRE-LIVWO: 연기·먼지·반복 복도에서도 버티는 mmWave 보강 odometry** — arXiv / IROS 2026\n4D mmWave radar·LiDAR·영상·wheel odometry를 tightly coupled IESKF로 융합하고, 관측성 분석에 따라 센서 가중치와 모드를 동적으로 바꿔. 실제 지하 탄광에서 평균 위치오차 5.677m를 보고하며 연기와 기하 퇴화 구간의 failure boundary를 검출했어.\n**왜 중요:** 센서 퇴화를 사후 처리하지 않고 온라인으로 감지해 융합 구조 자체를 바꾸는 접근은 극한환경 SLAM의 핵심 문제를 직접 겨냥해.\n<https://arxiv.org/abs/2609.05325|논문>\n\n7. **BLASt3R: 한 최적화 틀로 온라인 VSLAM과 비정렬 SfM을 모두 처리** — arXiv / ECCV 2026\n빠른 multi-view matcher와 monocular prior로 bundle adjustment를 초기화·정규화해, 같은 하이퍼파라미터로 온라인 VSLAM과 unordered image reconstruction을 지원해. 저자들은 비보정 설정에서도 기존 보정 VSLAM 접근들을 앞섰다고 보고했어.\n**왜 중요:** feed-forward 3D prior의 견고성과 전통 BA의 정밀도를 실시간성에 가까운 구조로 묶어 3D 재구성과 SLAM 사이의 도구 경계를 줄여.\n<https://arxiv.org/abs/2609.05210|논문>\n\n8. **WorldSculpt: 수백 개 물체가 얽힌 장면을 개별 mesh 세계로 복원** — arXiv\n단일 물체 3D 생성 prior에 posed multi-view conditioning을 붙여, 장면 단위 학습 없이도 심한 가림이 있는 대규모 장면을 공통 좌표계의 개별 object mesh 집합으로 생성해. 수백 물체와 GT mesh를 갖춘 UE-MeshyScene 벤치마크도 함께 제시했어.\n**왜 중요:** 장면을 하나의 덩어리로 재구성하는 대신 조작·시뮬레이션에 바로 쓸 수 있는 객체 단위 compositional world를 만든다는 점이 중요해.\n<https://arxiv.org/abs/2609.05416|논문>\n\n9. **BCM: 목표가 바뀌어도 재학습 없는 소형 비용지도** — arXiv\nlocal edge cost를 Bellman objective로 좌표 표현에 기록해, 새 목표마다 다시 학습하지 않고 경로를 읽어내는 cognitive map을 제안했어. 1,600-node weighted grid에서 성공률 100%, Dijkstra 대비 평균 gap 5%를 유지했고 400→3,600 node에서 메모리가 sublinear하게 증가했어.\n**왜 중요:** 이동로봇이 heterogeneous cost를 보존하면서도 큰 환경과 반복 목표질의에 대응할 수 있는 compact navigation memory 설계야.\n<https://arxiv.org/abs/2609.05104|논문>\n\n**한 줄 결론:** 이번 배치는 조작 VLA의 촉각 폐루프·실패 회복·언어 보상 안정성과, 현장 SLAM·객체 단위 3D world의 배포 신뢰성을 함께 밀어 올렸어."
     }
   ],
   "schema_version": 1,
@@ -762,5 +769,5 @@
     "channel_id": "C0B07C6NQHL",
     "slack_channel": "#aprl-chat-ai-tips"
   },
-  "updated_at": "2026-09-07T08:06:53.566+09:00"
+  "updated_at": "2026-09-07T12:01:42.582+09:00"
 }
