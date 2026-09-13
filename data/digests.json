@@ -895,6 +895,13 @@
       "slack_ts": "1789293818.280839",
       "channel_id": "C0B07C6NQHL",
       "raw_text": "**AI News Brief — 2026-09-13 19:02 KST**\n\n1. **[업데이트] GPT-6 Astra, OSM 경로 생성은 성공했지만 실행 provenance는 소실** — Simon Willison\n9월 12일 공개된 실사용 사례에서 Astra(Max)는 27분 동안 Nominatim과 Overpass로 도로·트레일 데이터를 받아 5K·10K 순환 경로를 계산하고, 내장 지도와 GPX·GeoJSON 파일을 만들었어. 이번에 새로 확인된 점은 결과물은 유용했지만 실행 코드와 세부 tool trace가 UI에 남지 않았고, thread compaction 뒤에는 사용한 Python 코드조차 복구하지 못했다는 거야.\n왜 중요: APRL 관점에서는 spatial agent가 경로를 만들어내는 성능만큼 map query, planner code, 중간 결정을 보존해 재현·검증할 수 있는 execution provenance가 중요해.\n<https://simonwillison.net/2026/Sep/12/astra-running-routes/|원문>\n\n**한 줄 결론:** 공간 에이전트는 실제 경로 산출까지 진전했지만, 장기 실행의 도구 이력과 재현성은 여전히 핵심 병목이야."
+    },
+    {
+      "id": "2026-09-14-0756",
+      "published_at": "2026-09-14T08:02:20.387+09:00",
+      "slack_ts": "1789340540.387279",
+      "channel_id": "C0B07C6NQHL",
+      "raw_text": "**AI News Brief — 2026-09-14 07:56 KST**\n\n1. **4-hi HBM이 추론용 최적점이라는 ‘tokens/HBM wafer’ 논리** — SemiAnalysis\n9월 13일 보고서는 HBM4 계열에서 stack 높이를 낮춰도 cube당 대역폭은 유지되며, 4-hi가 2,048 I/O를 모두 쓰는 최소 높이라고 분석했어. Kimi K3·Rubin Ultra NVL576 모델링에서는 8-hi와 12-hi가 4-hi보다 시스템 비용을 각각 12.1%, 26.3% 높이지만 많은 대화형 추론 구간에서 처리량 이득이 그보다 작았고, 실제 GB300 실험도 HBM을 줄인 뒤 KV cache를 DRAM으로 내보내면 높은 동시성 임계점 전까지 처리량이 비슷했어.\n왜 중요: APRL 관점에서는 추론 인프라를 설계할 때 GPU당 최대 메모리보다 latency SLA·KV offload·rack-scale 병렬화까지 포함한 tokens/HBM wafer가 더 직접적인 효율 지표가 될 수 있어.\n<https://newsletter.semianalysis.com/p/long-live-the-short-king-why-4-hi|SemiAnalysis>\n\n2. **[업데이트] K2 Horizon 독립평가: 3.7B는 tiny 1위, 36B-A4B는 small 4위** — Artificial Analysis\n앞서 공개 자체를 다뤘던 K2 Horizon에 9월 13일 독립평가가 추가됐어. Intelligence Index v4.3에서 3.7B는 16점으로 ≤4B open-weight 49개 중 1위, 7B는 21점으로 142개 중 9위, 총 36B·활성 4B MoVA는 26점으로 같은 small class 4위를 기록했지만 provider 속도·비용은 아직 측정되지 않았어.\n왜 중요: 작은 온디바이스 후보와 sparse MoVA 후보의 품질–활성 파라미터 trade-off가 구체화됐고, 로봇 배치 전에는 이 점수와 별도로 실제 지연시간·메모리·전력 측정이 필요해.\n<https://artificialanalysis.ai/models/k2-4b-ph1|3.7B> · <https://artificialanalysis.ai/models/k2-7b-ph2|7B> · <https://artificialanalysis.ai/models/k2-mova-36b-mid5|MoVA 36B-A4B>\n\n3. **Recurrent Looped Transformer: prompt부터 응답까지 하나의 recurrent state로 실행** — alphaXiv / 공식 저장소\n9월 12–13일 공개된 RLT는 causal encoder의 전역 KV와 recurrent decoder의 hidden state·sliding-window cache를 매 토큰 이어가며, RL 학습 때도 최신 가중치로 전체 상태를 재구성해 stale rollout state를 피하도록 설계했어. 약 79K 파라미터의 합성 실험에서 parity 과제는 학습 길이의 4배에서 60.8%로 Transformer의 약 48%를 앞섰지만, 더 어려운 five-state 과제는 chance 수준으로 떨어졌고 FLOPs도 맞추지 않아 아직 대규모 성능 주장은 아니야.\n왜 중요: foundation model의 recurrent 실행을 serving kernel과 RL replay 규약까지 함께 정의한 설계라 장기 에이전트 학습의 상태 불일치를 줄일 가능성이 있지만, 실제 모델 규모의 안정성·처리량 검증이 핵심 후속 과제야.\n<https://github.com/yifanzhang-pro/recurrent-looped-tranformer|공식 저장소·보고서> · <https://www.alphaxiv.org/abs/2609.recurrent-looped-transformer|alphaXiv>\n\n**한 줄 결론:** 이번 신호는 추론 효율의 기준이 단순 메모리 용량에서 대역폭·offload·tokens/HBM wafer로 이동하고, 모델 쪽도 활성 파라미터 효율과 실행 상태의 일관성을 함께 최적화하기 시작했다는 거야."
     }
   ],
   "schema_version": 1,
@@ -902,5 +909,5 @@
     "channel_id": "C0B07C6NQHL",
     "slack_channel": "#aprl-chat-ai-tips"
   },
-  "updated_at": "2026-09-13T19:03:38.280+09:00"
+  "updated_at": "2026-09-14T08:02:20.387+09:00"
 }
