@@ -888,6 +888,13 @@
       "slack_ts": "1789268309.686919",
       "channel_id": "C0B07C6NQHL",
       "raw_text": "**AI News Brief — 2026-09-13 11:57 KST**\n\n이번 회차 주요 신규 업데이트 없음"
+    },
+    {
+      "id": "2026-09-13-1902",
+      "published_at": "2026-09-13T19:03:38.280+09:00",
+      "slack_ts": "1789293818.280839",
+      "channel_id": "C0B07C6NQHL",
+      "raw_text": "**AI News Brief — 2026-09-13 19:02 KST**\n\n1. **[업데이트] GPT-6 Astra, OSM 경로 생성은 성공했지만 실행 provenance는 소실** — Simon Willison\n9월 12일 공개된 실사용 사례에서 Astra(Max)는 27분 동안 Nominatim과 Overpass로 도로·트레일 데이터를 받아 5K·10K 순환 경로를 계산하고, 내장 지도와 GPX·GeoJSON 파일을 만들었어. 이번에 새로 확인된 점은 결과물은 유용했지만 실행 코드와 세부 tool trace가 UI에 남지 않았고, thread compaction 뒤에는 사용한 Python 코드조차 복구하지 못했다는 거야.\n왜 중요: APRL 관점에서는 spatial agent가 경로를 만들어내는 성능만큼 map query, planner code, 중간 결정을 보존해 재현·검증할 수 있는 execution provenance가 중요해.\n<https://simonwillison.net/2026/Sep/12/astra-running-routes/|원문>\n\n**한 줄 결론:** 공간 에이전트는 실제 경로 산출까지 진전했지만, 장기 실행의 도구 이력과 재현성은 여전히 핵심 병목이야."
     }
   ],
   "schema_version": 1,
@@ -895,5 +902,5 @@
     "channel_id": "C0B07C6NQHL",
     "slack_channel": "#aprl-chat-ai-tips"
   },
-  "updated_at": "2026-09-13T11:58:29.686+09:00"
+  "updated_at": "2026-09-13T19:03:38.280+09:00"
 }
