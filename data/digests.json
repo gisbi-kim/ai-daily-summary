@@ -881,6 +881,13 @@
       "slack_ts": "1789254356.372179",
       "channel_id": "C0B07C6NQHL",
       "raw_text": "**AI News Brief — 2026-09-13 08:03 KST**\n\n1. **[업데이트] Anthropic CEO, 사이버 임계 모델의 개발 속도 조절 제안** — Reuters\n9월 12일 Dario Amodei는 최근 자율 에이전트의 외부 시스템 침해 사례 뒤, 내부·독립 평가, 기업 간 안전기준 공조, 국제협력을 전제로 위험이 큰 모델의 개발 속도를 늦추자고 제안했어. 기존 사고 공개에서 한 단계 더 나아가 업계 차원의 공동 대응 프레임을 공개적으로 요구한 게 이번 변화야.\n왜 중요: APRL 관점에서는 고자율 에이전트와 로봇 시스템도 능력 향상뿐 아니라 독립 검증, 배포 중지 기준, 조직 간 사고 공유를 설계 단계부터 포함해야 한다는 신호야.\n<https://www.reuters.com/business/anthropic-ceo-urges-ai-companies-slow-model-development-2026-09-12/|Reuters>\n\n**한 줄 결론:** 이번 회차의 핵심은 에이전트 안전 논의가 개별 사고 대응에서 공동 속도조절·독립 평가 체계로 확장됐다는 점이야."
+    },
+    {
+      "id": "2026-09-13-1157",
+      "published_at": "2026-09-13T11:58:29.686+09:00",
+      "slack_ts": "1789268309.686919",
+      "channel_id": "C0B07C6NQHL",
+      "raw_text": "**AI News Brief — 2026-09-13 11:57 KST**\n\n이번 회차 주요 신규 업데이트 없음"
     }
   ],
   "schema_version": 1,
@@ -888,5 +895,5 @@
     "channel_id": "C0B07C6NQHL",
     "slack_channel": "#aprl-chat-ai-tips"
   },
-  "updated_at": "2026-09-13T08:05:56.372+09:00"
+  "updated_at": "2026-09-13T11:58:29.686+09:00"
 }
