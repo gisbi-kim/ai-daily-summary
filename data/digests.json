@@ -1007,6 +1007,13 @@
       "published_at": "2026-09-19T07:58:25.313+09:00",
       "raw_text": "**AI News Brief — 2026-09-19 07:56 KST**\n\n1. **Claude Code 2.1.277, `AGENTS.md`를 프로젝트 지시 파일로 지원** — Anthropic\n9월 18일 공개된 Claude Code 2.1.277부터 프로젝트에 `CLAUDE.md`가 없으면 `AGENTS.md`를 대신 읽어. 설정은 `/config`의 Project instructions에서 바꿀 수 있고, 현재 Bedrock·Vertex·Foundry 환경에는 아직 적용되지 않았어.\n**왜 중요:** APRL 관점에서는 서로 다른 코딩 에이전트가 같은 저장소 지침을 공유할 수 있어 실험 절차·코딩 규칙·안전 제약을 도구별로 중복 관리하는 비용을 줄일 수 있어.\n[공식 릴리스](https://github.com/anthropics/claude-code/releases/tag/v2.1.277)\n\n**한 줄 결론:** 코딩 에이전트 생태계에서 프로젝트 수준 지침이 `AGENTS.md`로 수렴하는 흐름이 한 단계 더 뚜렷해졌어.",
       "slack_ts": "1789772305.312579"
+    },
+    {
+      "channel_id": "C0B07C6NQHL",
+      "id": "2026-09-19-1155",
+      "published_at": "2026-09-19T11:57:41.156+09:00",
+      "raw_text": "**AI News Brief — 2026-09-19 11:55 KST**\n\n1. **[업데이트] DeepSeek V4.1 Flash, OpenRouter 일일 사용량 1위** — OpenRouter Rankings\n새로 집계된 9월 18일 버킷에서 DeepSeek V4.1 Flash가 2.62T tokens로 전일 대비 16% 늘며 1위를 기록했고, Hy4 preview 2.03T와 GLM 5.3 Flash 1.94T가 뒤를 이었어. GPT-5.6 Luna는 1.19T로 5위였으며, 이 수치는 OpenRouter를 거친 토큰량이지 품질·사용자 수·시장 전체 점유율을 뜻하지는 않아.\n**왜 중요:** APRL 관점에서는 저비용·고속 오픈웨이트 계열이 실제 API 트래픽에서 빠르게 채택되는 흐름이라, 로컬·클라우드 추론 모델을 고를 때 성능 점수와 함께 공급 비용·처리량·생태계 성숙도를 볼 근거가 돼.\n[OpenRouter Rankings](https://openrouter.ai/rankings)\n\n**한 줄 결론:** DeepSeek V4.1 Flash의 강점이 벤치마크와 가격표를 넘어 실제 라우팅 사용량으로 이어지기 시작했어.",
+      "slack_ts": "1789786661.155919"
     }
   ],
   "schema_version": 1,
@@ -1014,5 +1021,5 @@
     "channel_id": "C0B07C6NQHL",
     "slack_channel": "#aprl-chat-ai-tips"
   },
-  "updated_at": "2026-09-19T07:58:25.313+09:00"
+  "updated_at": "2026-09-19T11:57:41.156+09:00"
 }
