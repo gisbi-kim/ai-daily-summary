@@ -1035,6 +1035,13 @@
       "published_at": "2026-09-20T12:06:42.476+09:00",
       "raw_text": "**AI News Brief — 2026-09-20 12:04 KST**\n\n1. **[업데이트] Hermes Agent, OpenRouter Apps & Agents 하루 사용량 1위** — OpenRouter Rankings\n아침 브리핑 때 9월 18일까지였던 집계가 9월 19일 완료 bucket으로 갱신됐어. 사용량 추적에 동의한 app 가운데 Hermes Agent가 1.49T tokens로 1위였고 Claude Code 917B, Kilo Code 568B, Cline 395B가 뒤를 이었으며, 이는 품질 순위나 전체 시장 점유율이 아니라 OpenRouter 내 token 처리량이야.\n**왜 중요:** persistent memory·tool·scheduled automation을 묶은 범용 agent가 coding agent보다 더 큰 관측 사용량을 만든 점은 agent workload가 IDE 밖의 장기 실행으로 넓어지는 신호야.\n<https://openrouter.ai/rankings>\n\n**한 줄 결론:** 이번 회차의 새 신호는 모델 성능 발표가 아니라, OpenRouter의 최신 완료 bucket에서 persistent agent 사용량이 coding agent를 앞선 실제 채택 변화야.",
       "slack_ts": "1789873602.476989"
+    },
+    {
+      "channel_id": "C0B07C6NQHL",
+      "id": "2026-09-20-1902",
+      "published_at": "2026-09-20T19:04:24.250+09:00",
+      "raw_text": "**AI News Brief — 2026-09-20 19:02 KST**\n\n이번 회차 주요 신규 업데이트 없음",
+      "slack_ts": "1789898664.250659"
     }
   ],
   "schema_version": 1,
@@ -1042,5 +1049,5 @@
     "channel_id": "C0B07C6NQHL",
     "slack_channel": "#aprl-chat-ai-tips"
   },
-  "updated_at": "2026-09-20T12:06:42.476+09:00"
+  "updated_at": "2026-09-20T19:04:24.250+09:00"
 }
