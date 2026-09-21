@@ -1049,6 +1049,13 @@
       "slack_ts": "1789945105.867339",
       "channel_id": "C0B07C6NQHL",
       "raw_text": "**AI News Brief — 2026-09-21 07:55 KST**\n\n이번 회차 주요 신규 업데이트 없음"
+    },
+    {
+      "id": "2026-09-21-1155",
+      "published_at": "2026-09-21T11:59:27.165+09:00",
+      "slack_ts": "1789959567.165069",
+      "channel_id": "C0B07C6NQHL",
+      "raw_text": "**AI News Brief — 2026-09-21 11:55 KST**\n\n1. **SkelWAM: 골격 표현으로 embodiment를 넘어 조작 정책 전이** — arXiv cs.RO\n로봇 팔 중심선·TCP 자세·그리퍼 명령을 공통 25차원 표현으로 만들고 embodiment별 제약 디코더를 붙였어. Franka 데이터만으로 LIBERO-Cross10의 10개 로봇에 전이해 평균 43.3% 성공률을 기록했고, JAKA mini2에서 continuum robot으로의 실물 전이도 보였어.\n**왜 중요:** APRL 관점에서는 로봇마다 정책을 다시 수집·학습하는 비용을 구조적 기하 표현으로 줄이는 구체적인 경로야.\n[논문](https://arxiv.org/abs/2609.21983)\n\n2. **GALA: 3D 기하를 넣은 cross-embodiment VLA 사전학습** — arXiv cs.RO\n장면 수준 latent action과 3D end-effector 기하를 결합하고, action label이 없는 사람 1인칭 영상도 함께 학습해. RoboCasa-GR1에서 68.3%, 실물 평가에서 75.5% 성공률을 보고했어.\n**왜 중요:** 사람 영상의 규모와 로봇 action의 정밀도를 잇는 사전학습 설계라 VLA 데이터 확장에 직접 참고할 만해.\n[논문](https://arxiv.org/abs/2609.21948)\n\n3. **CommitFlow: frozen VLA에 물리적 조건 확인과 국소 보정 추가** — arXiv cs.RO\nsemantic commitment monitor가 “잡기 전 이동” 같은 선행 조건 충족 여부를 검사하고, BoundaryFlow가 실행 경계를 국소 보정해. RoboTwin 2.0 열 과제에서 평균 75.9%로 π0.5보다 22.7%p 높았고 다른 정책에도 이득이 유지됐어.\n**왜 중요:** 거대 VLA를 재학습하지 않고도 장기 조작의 순서 오류와 실행 drift를 줄이는 실용적인 폐루프 계층이야.\n[논문](https://arxiv.org/abs/2609.21908)\n\n4. **PARTS: 실패 병목 구간만 실물 RL로 보강** — arXiv cs.RO\n사전학습 정책을 고정한 채 실패가 집중되는 subtask에만 residual RL을 적용하고, 자동 생성한 selector·success verifier로 보상을 구성해. YAM 양팔 과제는 32%→61%, Franka 과제는 50%→95%로 올랐고 과제당 실물 RL은 수십 분 수준이었어.\n**왜 중요:** 전체 정책을 다시 학습하지 않고 병목만 고치는 방식이라 실물 데이터·안전 비용이 큰 조작 연구에 효율적이야.\n[논문](https://arxiv.org/abs/2609.21788)\n\n5. **PSR-VLA: 미래 센서모터 상태를 예측해 접촉 조작 강화** — arXiv cs.RO\n미래의 멀티모달 상호작용을 예측하는 표현을 visuomotor action stream에 결합했어. 여섯 개 접촉 중심 실물 과제에서 91.7%를 기록해 π0.5보다 30.0%p, ForceVLA 계열보다 19.2~22.5%p 높았어.\n**왜 중요:** 힘·접촉이 핵심인 삽입과 정밀 조작에서는 현재 관측뿐 아니라 다음 상호작용을 예측하는 표현이 강한 단서가 될 수 있어.\n[논문](https://arxiv.org/abs/2609.21753)\n\n6. **LIMBO: 배포 시 필터 없는 휴머노이드 안전 제어** — arXiv cs.RO\n동역학을 모르는 환경에서 frozen base controller 주변 residual action의 control barrier function을 학습하고, 안전 구조를 task policy에 증류해 온라인 필터를 없앴어. 29-DoF 휴머노이드의 회피·저상 장애물 보행을 거쳐 하드웨어 전이도 보였어.\n**왜 중요:** 전신제어의 안전 제약을 실행 지연 없이 정책 내부로 옮기는 접근이라 실제 휴머노이드 배포에 의미가 커.\n[논문](https://arxiv.org/abs/2609.22075)\n\n7. **MAAP: 여러 로봇 팔이 손목 카메라 시점을 능동 조율** — arXiv cs.RO\n각 팔이 조작과 동시에 관측 시점을 고르고, RAIL이 역할과 action chunk를 함께 예측해. 세 팔 microwave 과제 성공률을 47%에서 82%로 높였고, 실물 양팔 시스템에서는 20회 중 14회 성공했지만 고정 시점 ACT는 0회였어.\n**왜 중요:** 다중팔 협업에서 카메라를 수동 센서가 아니라 공동 행동 변수로 다루면 가림과 역할 배분을 동시에 해결할 수 있음을 보여줘.\n[논문](https://arxiv.org/abs/2609.21929)\n\n8. **NeuRIO: 앵커 없이 확장되는 다중로봇 상대 관성항법** — arXiv cs.RO\n로봇 간 bearing·range와 IMU를 그래프 네트워크로 결합해 팀 크기와 통신 그래프 변화에 대응하고, 시뮬레이션 학습 뒤 실물에 zero-shot 전이했어. 실물 24개 시퀀스에서 위치 RMSE 14.1cm·회전 3.9도를 기록했고, 시뮬레이션 400대까지 업데이트가 20ms 미만이었어.\n**왜 중요:** GPS·고정 앵커가 어려운 환경에서 대규모 이기종 팀의 상대 위치추정을 실시간으로 확장할 가능성을 보여줘.\n[논문](https://arxiv.org/abs/2609.21707)\n\n9. **[업데이트] GLM 5.3 Flash가 OpenRouter 일일 사용량 1위로 교체** — OpenRouter Rankings\n9월 20일 완료 버킷에서 GLM 5.3 Flash가 2.52T tokens로 1위, DeepSeek V4.1 Flash가 2.49T로 2위가 됐어. 전날 3위였던 Hy4 preview는 40% 늘어난 1.97T로 3위를 유지했고, 이는 OpenRouter 트래픽이지 품질·사용자 수·전체 시장 점유율은 아니야.\n**왜 중요:** 고속 추론 모델의 실제 채택이 하루 단위로 크게 바뀌므로, 연구팀의 API·배치 추론 선택에는 벤치마크 외에 운영 트래픽과 변동성도 함께 봐야 해.\n[OpenRouter Rankings](https://openrouter.ai/rankings)\n\n**한 줄 결론:** 오늘 신호는 조작 VLA가 더 큰 모델 하나보다 기하·미래감각·실패 병목·폐루프 제약을 결합하는 쪽으로 진화하고, 다중로봇은 관측과 위치추정까지 공동 최적화한다는 거야."
     }
   ],
   "schema_version": 1,
@@ -1056,5 +1063,5 @@
     "channel_id": "C0B07C6NQHL",
     "slack_channel": "#aprl-chat-ai-tips"
   },
-  "updated_at": "2026-09-21T07:58:25.867+09:00"
+  "updated_at": "2026-09-21T11:59:27.165+09:00"
 }
