@@ -1098,6 +1098,13 @@
       "slack_ts": "1790118391.422419",
       "channel_id": "C0B07C6NQHL",
       "raw_text": "**AI News Brief — 2026-09-23 08:05 KST**\n\n이번 회차 주요 신규 업데이트 없음"
+    },
+    {
+      "id": "2026-09-23-1156",
+      "published_at": "2026-09-23T12:03:03.525+09:00",
+      "slack_ts": "1790132583.525519",
+      "channel_id": "C0B07C6NQHL",
+      "raw_text": "**AI News Brief — 2026-09-23 11:56 KST**\n\n1. **JAMB: 행동과 미래 3D 움직임을 함께 복원하는 양팔 정책** — 출처: arXiv cs.RO\n양팔 행동과 미래 3D point track을 하나의 Transformer에서 공동 denoising해 서로를 보정해. RoboTwin 2.0 16개 과제 평균 성공률 83.4%로 최강 기준선보다 23.9%p 높았고, 실제 3개 과제에서도 action-only보다 50.0%p 높았어.\n왜 중요: 양팔 조작에서 각 팔의 행동이 공유 장면을 어떻게 바꿀지 정책 내부에서 명시적으로 예측하는 강한 geometry-aware 설계야.\n링크: https://arxiv.org/abs/2609.25322\n\n2. **HOTICE: 혼잡 공간에서 물체까지 고려하는 휴머노이드 전신 운반** — 출처: arXiv cs.RO\n로봇과 운반 물체의 충돌 회피를 함께 표현하고 상·하체 RL 에이전트를 결합한 뒤 specialist 정책을 하나의 generalist로 증류해. MuJoCo와 실제 Unitree G1에서 미관측 장애물 배치와 다양한 물체 형상으로 sim-to-real 운반을 검증했어.\n왜 중요: loco-manipulation을 보행과 팔 제어의 단순 결합이 아니라 탑재물까지 포함한 전신 기하·제어 문제로 다뤘어.\n링크: https://arxiv.org/abs/2609.25363\n\n3. **Brace Yourself: 환경을 짚어 휴머노이드 조작 힘을 4배 이상 확대** — 출처: arXiv cs.RO\n한 손으로 주변을 지지하고 다른 손으로 힘 작업을 수행하도록 task-conditioned 지지 자세와 두 동기식 RL 정책을 학습해. Unitree G1에서 지지 없는 13.5N 대비 최대 60N의 사용 가능한 접촉력을 냈고, 재학습 없이 다른 작업 영역으로 일반화했어.\n왜 중요: 외부 접촉을 방해가 아니라 전신 균형과 힘 전달을 높이는 제어 자원으로 활용한 실물 결과야.\n링크: https://arxiv.org/abs/2609.25486\n\n4. **VLAQuantBench: VLA 양자화 9.5만 에피소드 폐루프 지도** — 출처: arXiv cs.RO / cs.AI\n4개 모델을 409회, 94,574개 시뮬레이션 에피소드로 평가했어. π0.5의 무보정 W4A4는 적용 층을 126개에서 167개로 늘리자 성공률이 7.0%에서 70.5%로 회복됐고, OpenVLA-OFT는 28,672개 파라미터의 단일 출력 projection만 보호해도 나머지 441개 선형층을 저정밀로 유지하며 근접 기준 성능을 되찾았어.\n왜 중요: VLA 압축은 “민감한 층 몇 개”라는 고정 규칙보다 모델·범위·보정법의 상호작용을 실제 폐루프로 검증해야 한다는 근거야.\n링크: https://arxiv.org/abs/2609.25376\n\n5. **GINIO: IMU 장착 방향이 바뀌어도 재학습 없는 관성주행거리계** — 출처: arXiv cs.RO\n평균과 공분산이 임의의 SO(3) 센서 좌표 회전에 맞게 변환되도록 neural inertial odometry 인터페이스를 구성했어. Fetch에서 처음 보는 물리적 IMU 재장착 시 ATE를 8.15m에서 0.50m로 낮췄고, TLIO에서는 EqNIO보다 11.6배 적은 FLOPs로 2.018m ATE를 기록했어.\n왜 중요: 센서 설치 오차와 플랫폼 교체를 data augmentation이 아니라 기하학적 보장으로 흡수해 현장 재보정 비용을 줄일 수 있어.\n링크: https://arxiv.org/abs/2609.25338\n\n6. **ArborSplat: 과수원의 가는 구조를 보존하는 온라인 semantic 3DGS SLAM** — 출처: arXiv cs.RO\nLiDAR odometry, Gaussian semantic optimization, 지면 기준 높이 제약을 결합해 줄기·지주·과실 같은 작은 구조를 지도에 남겨. 12개 주행 모두 ATE 0.5m 이하였고, 공통 구간 held-out mIoU는 SGS-SLAM·GS3LAM보다 0.15~0.36 높으면서 1.7~7.5배 빨랐어.\n왜 중요: 외관 품질 중심 3DGS를 실제 농업 로봇에 필요한 위치추정·희소 구조 의미지도까지 확장한 사례야.\n링크: https://arxiv.org/abs/2609.26315\n\n7. **RoboFollow: 높은 VLA 성공률이 언어 이해를 뜻하지 않는다는 진단** — 출처: arXiv cs.RO\n한 장면에 여러 유효 과제를 넣어 언어가 필수가 되게 하고 L0~L3 교란으로 의도 이해와 실행을 분리하는 benchmark를 제안했어. 9개 VLA·WAM 정책은 L0 성능이 좋아도 L1~L3로 안정적으로 이어지지 않았고, 강한 VLM·QA 공동학습·CFG 등도 격차를 닫지 못했어.\n왜 중요: 조작 평가에서 장면 shortcut과 실제 instruction grounding을 분리하지 않으면 정책 능력을 크게 과대평가할 수 있어.\n링크: https://arxiv.org/abs/2609.25636\n\n8. **PROACT: 사람의 다음 움직임을 예측하는 협동 운반 모바일 매니퓰레이터** — 출처: arXiv cs.RO\n사람-사람 운반 시연으로 학습한 Transformer 예측을 9-DoF 모바일 매니퓰레이터의 compliant whole-body control에 넣었어. 실제 108회 실험에서 compliance-only 대비 상호작용 work를 59.2%, 완료 시간을 12.9% 줄였어.\n왜 중요: 사람과 물체를 함께 옮기는 mobile manipulation에서 수동 순응을 넘어 예측과 전신제어를 결합한 정량적 실물 검증이야.\n링크: https://arxiv.org/abs/2609.25351\n\n9. **SWE-Serve: 프로덕션 추론 서빙을 실제로 고치는 에이전트 benchmark** — 출처: arXiv cs.AI\nSGLang의 최근 변경에서 뽑은 53개 repository-level 과제로 모델 지원·runtime·API를 함께 수정하게 하고 CPU 또는 H100에서 숨은 기능·회귀·성능 테스트를 실행해. 11개 모델의 최상 설정도 pass@1 75%였고, E2E 테스트는 다른 검사를 모두 통과한 패치의 약 3분의 1을 추가로 탈락시켰어.\n왜 중요: AI 인프라 에이전트는 로컬 테스트 통과가 아니라 실제 serving 경로의 기능·회귀·성능까지 검증해야 한다는 측정틀이야.\n링크: https://arxiv.org/abs/2609.26777\n\n**한 줄 결론:** 이번 회차는 양팔·휴머노이드·협동 운반 정책이 미래 기하와 전신 접촉을 더 명시적으로 모델링하는 동시에, VLA 양자화·언어 grounding·SLAM·추론 인프라 평가가 실제 폐루프와 E2E 검증 중심으로 이동하고 있다는 신호야."
     }
   ],
   "schema_version": 1,
@@ -1105,5 +1112,5 @@
     "channel_id": "C0B07C6NQHL",
     "slack_channel": "#aprl-chat-ai-tips"
   },
-  "updated_at": "2026-09-23T08:06:31.422+09:00"
+  "updated_at": "2026-09-23T12:03:03.525+09:00"
 }
