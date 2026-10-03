@@ -1322,6 +1322,13 @@
       "published_at": "2026-10-03T18:59:56.224+09:00",
       "raw_text": "**AI News Brief — 2026-10-03 18:56 KST**\n\n이번 회차 주요 신규 업데이트 없음",
       "slack_ts": "1791021596.224379"
+    },
+    {
+      "channel_id": "C0B07C6NQHL",
+      "id": "2026-10-04-0755",
+      "published_at": "2026-10-04T07:56:44.660+09:00",
+      "raw_text": "**AI News Brief — 2026-10-04 07:55 KST**\n\n이번 회차 주요 신규 업데이트 없음",
+      "slack_ts": "1791068204.660549"
     }
   ],
   "schema_version": 1,
@@ -1329,5 +1336,5 @@
     "channel_id": "C0B07C6NQHL",
     "slack_channel": "#aprl-chat-ai-tips"
   },
-  "updated_at": "2026-10-03T18:59:56.224+09:00"
+  "updated_at": "2026-10-04T07:56:44.660+09:00"
 }
