@@ -1336,6 +1336,13 @@
       "published_at": "2026-10-04T12:02:06.236+09:00",
       "raw_text": "**AI News Brief — 2026-10-04 11:56 KST**\n\n1. **Ling 3.1 Flash 독립 평가: 25B 활성 MoE가 211 tok/s 기록**\n출처: Artificial Analysis\nArtificial Analysis가 InclusionAI의 공개 가중치 reasoning 모델 Ling 3.1 Flash 평가를 추가했어. Intelligence Index 41, 출력 211.4 tok/s, 과제당 비용 $0.99를 기록했고, 모델은 560B 전체·25B 활성 파라미터와 1M context를 제공해.\n왜 중요: APRL 관점에서는 장기 agent·로봇 reasoning backend를 고를 때 정확도뿐 아니라 활성 연산량, 생성 속도, 실제 과제 비용을 함께 비교할 수 있는 새 price-performance 지점이야.\n링크: https://artificialanalysis.ai/models/ling-3-1-flash\n\n2. **에이전트 시대의 비용 안전장치: 경고보다 hard cap**\n출처: Simon Willison’s Blog\nSimon Willison은 pay-by-usage API와 클라우드에서 한도 초과를 알리기만 하는 soft cap 대신 요청을 실제 중단하는 hard cap이 기본이어야 한다고 제안했어. coding·personal agent가 반복 호출과 리소스 생성을 자동화하면서, 비용 폭주가 운영 안전 문제로 커진다는 분석이야.\n왜 중요: 연구팀 입장에서는 token budget, tool-call 제한, run별·일별 cutoff를 모델의 자율 판단이 아니라 시스템이 강제하는 정책으로 두어야 한다는 실무 원칙이야.\n링크: https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/\n\n**한 줄 결론:** 모델 선택은 이제 성능·속도·비용을 함께 봐야 하고, agent 운영에서는 지출 한도를 시스템 레벨에서 강제해야 해.",
       "slack_ts": "1791082926.236269"
+    },
+    {
+      "channel_id": "C0B07C6NQHL",
+      "id": "2026-10-04-1855",
+      "published_at": "2026-10-04T18:57:02.448+09:00",
+      "raw_text": "**AI News Brief — 2026-10-04 18:55 KST**\n\n이번 회차 주요 신규 업데이트 없음",
+      "slack_ts": "1791107822.447849"
     }
   ],
   "schema_version": 1,
@@ -1343,5 +1350,5 @@
     "channel_id": "C0B07C6NQHL",
     "slack_channel": "#aprl-chat-ai-tips"
   },
-  "updated_at": "2026-10-04T12:02:06.236+09:00"
+  "updated_at": "2026-10-04T18:57:02.448+09:00"
 }
