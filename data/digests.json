@@ -1931,6 +1931,13 @@
       "slack_ts": "1793527092.104399",
       "channel_id": "C0B07C6NQHL",
       "raw_text": "**AI News Brief — 2026-11-01 18:56 KST**\n\n1. **코드리뷰 agent가 diff만 읽지 않고 sandbox에서 버그를 재현·패치** — OpenRouter\nOpenRouter는 변경된 전체 파일·테스트·diff를 Linux sandbox에 올리고, 의심한 버그를 명령으로 재현해 `confirmed`와 `unconfirmed`로 구분한 뒤 적용 가능한 V4A patch를 반환하는 233줄 Python reviewer를 공개했어. 다섯 개 버그를 심은 변경으로 네 모델을 시험했을 때 리뷰당 1–4분·0.015–0.045달러가 들었고, Claude Sonnet 5.5는 세 번 모두 다섯 버그를 전부 수정했지만 업로드한 코드가 OpenRouter workspace와 model provider로 전달된다는 보안 경계도 명시했어.\n왜 중요: 연구팀 입장에서는 agent 평가와 자동수정을 자연어 의견이 아니라 재현 명령·출력·구조화된 patch로 검증하는 패턴을 실험 코드와 로봇 소프트웨어 CI에 적용할 수 있고, 동시에 비공개 코드·secret의 외부 전송 경계를 분명히 관리해야 해.\n링크: https://openrouter.ai/blog/tutorials/ai-code-review/\n\n**한 줄 결론:** 이번 회차의 핵심 신호는 coding agent가 ‘그럴듯한 리뷰’에서 sandbox 실행증거와 적용 가능한 patch를 남기는 검증형 CI 구성요소로 이동하고 있다는 점이야."
+    },
+    {
+      "id": "2026-11-02-0802",
+      "published_at": "2026-11-02T08:05:50.669+09:00",
+      "slack_ts": "1793574350.669699",
+      "channel_id": "C0B07C6NQHL",
+      "raw_text": "**AI News Brief — 2026-11-02 08:02 KST**\n\n1. **Jepsen, AI로 개발한 ParticleDB에서 correctness 이슈 96건 확인**\n출처: Jepsen\nJepsen이 ParticleDB 1.1.4부터 1.1.18.11.rc-22까지 시험해 96개 이슈를 찾았어. 테스트 과정에서는 기본 OCC 모드의 커밋 쓰기 유실과 serializable 모드의 이상 현상도 관찰됐고, 협업 종료 시점에는 대부분 수정됐지만 공급사가 이후 버전에서 남은 문제를 고쳤다는 주장은 Jepsen이 재검증하지 않았어.\n왜 중요: 에이전트가 빠르게 만든 연구·인프라 소프트웨어일수록 문서나 “수정 완료” 보고보다 실행 가능한 적대적 테스트와 재현 로그가 신뢰의 핵심이야.\nhttps://jepsen.io/analyses/particledb-1.1.4\n\n2. **데이터센터급 TPU가 궤도에서 Gemma 4 첫 응답 생성**\n출처: Google Project Suncatcher\nGoogle은 10월 1일 발사한 시험 위성에서 호스트와 TPU 트레이를 가동하고, Gemma 4에 보낸 프롬프트의 응답을 지상으로 수신했다고 밝혔어. 다음 단계는 궤도 열·방사선 스트레스 시험이며, 상호 연결된 쌍둥이 위성은 2027년이 목표야.\n왜 중요: 아직 “우주 데이터센터”의 실용성을 입증한 단계는 아니지만, AI 컴퓨트 설계 공간이 전력·냉각뿐 아니라 방사선 내성·위성 간 네트워킹까지 넓어지고 있다는 신호야.\nhttps://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/\n\n3. **OpenAI, robots.txt의 공통 AI 학습 선호 신호 지원 발표**\n출처: OpenAI\nOpenAI는 사이트 운영자가 공급사별 크롤러 규칙을 따로 관리하지 않고 foundation-model 학습 선호를 공통 신호로 표시할 수 있도록, IETF AI Preferences 작업과 연계된 robots.txt 신호를 수개월 안에 지원하겠다고 발표했어. 기존 GPTBot·검색 크롤러 제어는 그대로 유지돼.\n왜 중요: 공개 웹 데이터의 수집·학습 거버넌스가 공급사별 관행에서 상호운용 가능한 표준으로 이동하면 데이터 파이프라인의 출처·동의 추적에도 직접 영향을 줘.\nhttps://openai.com/index/helping-websites-express-ai-training-preferences/\n\n4. **Droid 1.0, 수백 개 도구 호출을 한 번의 프로그램으로 묶는 에이전트 하네스**\n출처: Factory\nFactory는 모델이 샌드박스 JavaScript를 작성해 수백 개 도구 호출을 한 요청에서 실행하는 programmatic tool calling을 Droid 1.0의 기본으로 도입했어. 자체 Terminal-Bench 4 평가에서는 같은 GPT-6.1 Sol로 Codex보다 3.5점 높고 비용은 12% 낮았다고 보고했지만, 이는 공급사 측 측정값이야.\n왜 중요: 장기 에이전트의 성능·비용·재현성은 모델 선택만큼 도구 호출 구조와 결정론적 검증 루프에 크게 좌우된다는 구체적 설계 사례야.\nhttps://factory.com/news/frontier-harness\n\n5. **agent-desktop, 픽셀 추측 대신 OS 접근성 트리로 컴퓨터 사용**\n출처: Vercel Labs\n오픈소스 agent-desktop은 macOS·Windows·Linux의 접근성 트리를 JSON 스냅샷과 안정적인 참조로 노출해, 에이전트가 UI 요소를 다시 찾아 검증하며 조작할 수 있게 해. 화면·클립보드·스냅샷에는 민감 정보가 포함될 수 있어 공개 로그나 외부 전송을 피하라는 보안 경고도 명시했어.\n왜 중요: 컴퓨터 사용 에이전트가 취약한 픽셀 좌표 기반 조작에서 구조화된 상태·재시도 안전 동작으로 이동하는 흐름은 로봇 UI, 원격 운용, 실험 자동화에도 참고할 만해.\nhttps://github.com/vercel-labs/agent-desktop\n\n**한 줄 결론:** 이번 신호는 “더 큰 모델”보다 검증 가능한 에이전트 하네스와 데이터·컴퓨트 인프라의 신뢰성 설계가 실제 확장성을 좌우한다는 쪽으로 모여."
     }
   ],
   "schema_version": 1,
@@ -1938,5 +1945,5 @@
     "channel_id": "C0B07C6NQHL",
     "slack_channel": "#aprl-chat-ai-tips"
   },
-  "updated_at": "2026-11-01T18:58:12.104+09:00"
+  "updated_at": "2026-11-02T08:05:50.669+09:00"
 }
