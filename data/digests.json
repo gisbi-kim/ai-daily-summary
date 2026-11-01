@@ -1924,6 +1924,13 @@
       "slack_ts": "1793502374.095749",
       "channel_id": "C0B07C6NQHL",
       "raw_text": "**AI News Brief — 2026-11-01 12:04 KST**\n\n1. **공유 링크 하나로 ChatGPT 계정 탈취가 가능했던 P1 취약점 공개** — Parameter Labs / Simon Willison\nParameter Labs는 공개 공유 대화의 그래프와 HTML Preview를 결합해, MathLive의 `postMessage` 수신부·샌드박스 없는 iframe·YouTube oEmbed JSONP를 연쇄 이용함으로써 `chatgpt.com` 권한의 JavaScript를 실행하고 비공개 대화를 읽어 외부로 전송할 수 있었음을 공개했어. OpenAI는 10월 26일 두 웹 프런트엔드에서 해당 교차 프레임 메시지를 거부하도록 수정하고 P1으로 분류했으며, 공개 자료에는 실제 악용 사례가 확인되지 않았어.\n왜 중요: APRL 관점에서는 외부 콘텐츠를 iframe으로 격리하는 것만으로 충분하지 않고, `postMessage`의 origin·송신 창 검증과 HTML sink, 동적 프레임, CSP 허용 목록까지 하나의 신뢰 경계로 함께 감사해야 한다는 구체적인 사례야.\n링크: [Parameter Labs 원문](https://www.parameter.ai/labs/we-found-a-gap-at-openai) · [Simon Willison 해설](https://simonwillison.net/b/9728)\n\n**한 줄 결론:** 이번 회차의 핵심 신호는 샌드박스 자체보다 주변 컴포넌트 사이의 교차 프레임 신뢰 연결이 더 치명적인 탈출 경로가 될 수 있다는 점이야."
+    },
+    {
+      "id": "2026-11-01-1856",
+      "published_at": "2026-11-01T18:58:12.104+09:00",
+      "slack_ts": "1793527092.104399",
+      "channel_id": "C0B07C6NQHL",
+      "raw_text": "**AI News Brief — 2026-11-01 18:56 KST**\n\n1. **코드리뷰 agent가 diff만 읽지 않고 sandbox에서 버그를 재현·패치** — OpenRouter\nOpenRouter는 변경된 전체 파일·테스트·diff를 Linux sandbox에 올리고, 의심한 버그를 명령으로 재현해 `confirmed`와 `unconfirmed`로 구분한 뒤 적용 가능한 V4A patch를 반환하는 233줄 Python reviewer를 공개했어. 다섯 개 버그를 심은 변경으로 네 모델을 시험했을 때 리뷰당 1–4분·0.015–0.045달러가 들었고, Claude Sonnet 5.5는 세 번 모두 다섯 버그를 전부 수정했지만 업로드한 코드가 OpenRouter workspace와 model provider로 전달된다는 보안 경계도 명시했어.\n왜 중요: 연구팀 입장에서는 agent 평가와 자동수정을 자연어 의견이 아니라 재현 명령·출력·구조화된 patch로 검증하는 패턴을 실험 코드와 로봇 소프트웨어 CI에 적용할 수 있고, 동시에 비공개 코드·secret의 외부 전송 경계를 분명히 관리해야 해.\n링크: https://openrouter.ai/blog/tutorials/ai-code-review/\n\n**한 줄 결론:** 이번 회차의 핵심 신호는 coding agent가 ‘그럴듯한 리뷰’에서 sandbox 실행증거와 적용 가능한 patch를 남기는 검증형 CI 구성요소로 이동하고 있다는 점이야."
     }
   ],
   "schema_version": 1,
@@ -1931,5 +1938,5 @@
     "channel_id": "C0B07C6NQHL",
     "slack_channel": "#aprl-chat-ai-tips"
   },
-  "updated_at": "2026-11-01T12:06:14.095+09:00"
+  "updated_at": "2026-11-01T18:58:12.104+09:00"
 }
