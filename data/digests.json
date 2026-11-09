@@ -2085,6 +2085,13 @@
       "slack_ts": "1794179090.744659",
       "channel_id": "C0B07C6NQHL",
       "raw_text": "**AI News Brief — 2026-11-09 08:04 KST**\n\n이번 회차 주요 신규 업데이트 없음"
+    },
+    {
+      "id": "2026-11-09-1157",
+      "published_at": "2026-11-09T11:57:35.099+09:00",
+      "slack_ts": "1794193055.099679",
+      "channel_id": "C0B07C6NQHL",
+      "raw_text": "**AI News Brief — 2026-11-09 11:57 KST**\n\n1. **Sketchpad: 0.8B VLM의 임의 길이 산술을 유한 검증으로 보증**\n출처: Hugging Face Papers·arXiv\nSketchpad는 Qwen3.5-0.8B가 외부 작업지의 세 칸만 보고 숫자·carry/borrow·다음 연산을 한 단계씩 출력하게 제한해, 임의 길이 입력의 정확성을 유한한 상태 집합 검증으로 환원했어. 배포 장치에서 2,446개 view를 모두 통과했고, Lean 증명과 함께 덧셈·뺄셈·곱셈·나눗셈·제곱근·최대공약수의 임의 길이 정확성을 보장한다고 보고했어.\n왜 중요: 거대 모델의 확률적 정답률 대신 작은 신경망·외부 메모리·형식 검증을 결합해 행동 단위의 완전한 보증을 만드는 방식은 안전이 중요한 agent와 physical AI의 저수준 계산·계획 모듈에도 확장 가능한 패턴이야.\n링크: https://huggingface.co/papers/2611.04434\nhttps://arxiv.org/abs/2611.04434\nhttps://neovand.github.io/sketchpad/\n\n2. **Decision Index v2: 정확도보다 보정된 확신과 일관성을 평가**\n출처: Artificial Analysis\nDecision Index v2는 정확도와 Brier score를 결합한 Decision Score를 새 대표 지표로 두고, 비공개 데이터 비중을 25%에서 45%로 높였어. 1,500개 실제 문서에서 15개 답을 모두 맞혀야 성공하는 AA-Paperclip과 등가 질문 440개 변형의 답·확률 일관성을 보는 AA-Symmetry를 추가했으며, 최고 decision model들은 72~73점으로 1점 안에 모였어.\n왜 중요: 자동화 시스템이 언제 직접 행동하고 언제 사람이나 강한 모델에 넘길지를 정하려면 평균 정확도뿐 아니라 confidence calibration, 표현 변화에 대한 안정성, 문서 단위 완전 성공, 실제 비용·지연을 함께 봐야 한다는 평가 전환이야.\n링크: https://artificialanalysis.ai/articles/decision-index-v2\nhttps://artificialanalysis.ai/models/decision\n\n**한 줄 결론:** 이번 회차의 공통 신호는 더 큰 모델의 평균 점수보다, 작은 실행 모듈의 형식적 보증과 실제 의사결정의 확신·일관성·비용을 검증하는 쪽으로 신뢰성 평가가 구체화되고 있다는 거야."
     }
   ],
   "schema_version": 1,
@@ -2092,5 +2099,5 @@
     "channel_id": "C0B07C6NQHL",
     "slack_channel": "#aprl-chat-ai-tips"
   },
-  "updated_at": "2026-11-09T08:04:50.744+09:00"
+  "updated_at": "2026-11-09T11:57:35.099+09:00"
 }
